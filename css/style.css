@@ -371,6 +371,9 @@ a:visited:hover {
 	background-color: #38535d;
 	transform: translateY(-2px);
 }
+.contacts__button:disabled {
+	background-color: gray;
+}
 .contacts__image-block {
 	position: relative;
 	display: flex;

@@ -8,10 +8,17 @@ Array.from(links).forEach(
 )
 
 window.addEventListener('scroll', () => {
-	const header = document.querySelector('.header-container');
+	const header = document.querySelector('.header-container')
 	if (window.scrollY > 50) {
-		header.classList.add('scrolled');
+		header.classList.add('scrolled')
 	} else {
-		header.classList.remove('scrolled');
+		header.classList.remove('scrolled')
 	}
-});
+})
+
+const checkbox = document.getElementById('acceptPolicy')
+const submitButton = document.getElementById('submitBtn')
+
+checkbox.addEventListener('change', () => {
+	submitButton.disabled = !checkbox.checked
+})
