@@ -149,9 +149,9 @@ a:visited:hover {
 	text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
 		0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
 .page-wrapper {
-	min-height: 100vh;
-	overflow: visible;
+	/* min-height: 100vh; */
 	width: 100%;
 }
 .content-wrapper {
@@ -203,7 +203,7 @@ a:visited:hover {
 .main-container--primary {
 	padding-left: 150px;
 	display: grid;
-	grid-template-columns: 4fr 2fr;
+	grid-template-columns: 5fr 3fr;
 	align-items: center;
 	justify-content: center;
 }
@@ -217,6 +217,7 @@ a:visited:hover {
 }
 .primary-image {
 	height: 100%;
+	width: 100%;
 }
 .primary-image img {
 	width: 100%;
@@ -303,7 +304,7 @@ a:visited:hover {
 }
 .contacts {
 	width: 100%;
-	background-color: red;
+
 	border-radius: 30px;
 	height: 80%;
 	overflow: hidden;
@@ -321,7 +322,6 @@ a:visited:hover {
 	padding-inline: 60px;
 	gap: 40px;
 	display: grid;
-	align-items: center;
 	grid-template-columns: 4fr 3fr;
 }
 .contacts__form-block {
@@ -376,13 +376,11 @@ a:visited:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: visible;
-}
-
-.contacts__image-block img {
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	object-fit: contain;
+	background-image: url('../images/house-three.jpg');
+	background-size: cover;
 }
 
 .woman {
@@ -475,27 +473,128 @@ a:visited:hover {
 	text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-	.contacts__content {
-		height: auto;
-		padding: 30px 20px;
+@media (max-width: 1201px) {
+	.header-container {
+		padding-left: 75px;
+	}
+	.main-container--primary {
+		padding-left: 75px;
+	}
+	.primary-text h1 {
+		font-size: 3.5rem;
+		height: 100%;
+		margin: 0 0 20px;
+	}
+	.primary-text p {
+		font-size: 1.3em;
+	}
+	.primary-text strong {
+		font-size: 1.3em;
+	}
+	.order-button {
+		padding: 10px 20px;
+		font-size: 1em;
+	}
+	.main-container--secondary {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.main-container--secondary img {
+		width: 100%;
+		height: 95%;
+	}
+	.secondary-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+	.benefits-list {
+		font-size: 1rem;
+		display: flex;
+		flex-direction: column;
 		gap: 30px;
 	}
-	.contacts__image-block {
-		height: 300px;
-	}
-	.contacts__image-block img {
-		max-height: 300px;
-	}
-	.footer__links {
-		flex-direction: column;
-		align-items: center;
-		gap: 15px;
+
+	.contacts {
+		height: 70%;
 	}
 
-	.footer__legal {
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
+	.contacts__content {
+		grid-template-columns: 5fr 4fr;
 	}
+
+	.contacts__title {
+		font-size: 2.4rem;
+	}
+
+	.woman {
+		max-height: 80%;
+	}
+}
+
+@media (max-width: 1100px) {
+	.main-container {
+		height: 90vh;
+	}
+
+	.primary-image img {
+		z-index: -999;
+	}
+	.header-container {
+		padding-left: 65px;
+	}
+	.main-container--primary {
+		padding-left: 65px;
+	}
+	.primary-text h1 {
+		font-size: 2rem;
+	}
+	.primary-text p {
+		font-size: 1em;
+	}
+	.primary-text strong {
+		font-size: 1em;
+	}
+	.features-list {
+		font-size: 1rem;
+	}
+	.order-button {
+		padding: 10px 20px;
+		font-size: 1em;
+	}
+	.main-container--secondary {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.secondary-image--first {
+		height: 100%;
+	}
+	.secondary-image--second {
+		display: none;
+	}
+	.secondary-text {
+		justify-content: space-between;
+		height: 95%;
+	}
+
+	.contacts__content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.contacts__title {
+		font-size: 2.1rem;
+	}
+
+	.woman {
+		max-height: 60%;
+		left: 60%;
+	}
+	.contacts__button {
+		padding: 12px 20px;
+	}
+}
+
+@media (max-width: 800px) {
 }
